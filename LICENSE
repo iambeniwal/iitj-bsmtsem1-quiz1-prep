@@ -1,0 +1,101 @@
+LICENSE
+=======
+
+This repository contains three kinds of material with three different owners.
+Read all three sections before reusing anything — no single licence below
+covers the whole repository.
+
+Compiled by Rahul Beniwal — https://www.linkedin.com/in/iambeniwal/
+
+
+--------------------------------------------------------------------------
+1. THE CODE  —  MIT License
+--------------------------------------------------------------------------
+
+Applies to: assets/sheet.js, assets/sheet.css, assets/courses.js,
+assets/stub.js, build-standalone.py, index.html, and each course folder's
+index.html page shell.
+
+Copyright (c) 2026 Rahul Beniwal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+--------------------------------------------------------------------------
+2. THE REVISION CONTENT  —  CC BY-NC-SA 4.0
+--------------------------------------------------------------------------
+
+Applies to: the original revision notes, topic explanations, trap lists,
+exam-strategy guidance and the question bank authored for this project
+(the written prose and questions inside each course's data.js), EXCEPT the
+third-party material described in section 3.
+
+Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License (CC BY-NC-SA 4.0).
+
+  Deed:        https://creativecommons.org/licenses/by-nc-sa/4.0/
+  Legal code:  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+In short, you are free to share and adapt this material provided that you:
+
+  BY  — give appropriate credit to Rahul Beniwal, link to the licence, and
+        indicate if changes were made;
+  NC  — do not use it for commercial purposes, including selling it,
+        placing it behind a paywall, or bundling it into a paid course;
+  SA  — distribute any adaptations under this same licence.
+
+No warranties are given. The licence may not give you all of the permissions
+necessary for your intended use.
+
+
+--------------------------------------------------------------------------
+3. THIRD-PARTY COURSE MATERIAL  —  NOT LICENSED HERE
+--------------------------------------------------------------------------
+
+These pages summarise, paraphrase and in places quote teaching material from
+the B.S. in Management & Technology programme at the Indian Institute of
+Technology Jodhpur, delivered through Masai School's learning platform.
+
+That underlying material — including lecture content, worked examples, case
+studies, figures, direct quotations from faculty, and a small number of
+multiple-choice questions reproduced from a course slide deck — remains the
+intellectual property of IIT Jodhpur and the respective faculty members.
+It is NOT covered by sections 1 or 2 above, and no licence to it is granted
+by this repository.
+
+It is included here for the private study of students enrolled on the
+programme, who already have authorised access to the same material through
+the official learning platform.
+
+If you are a rights holder and would like something removed or amended,
+please contact the author at the link at the top of this file.
+
+
+--------------------------------------------------------------------------
+4. NO AFFILIATION
+--------------------------------------------------------------------------
+
+This is an unofficial, student-made study aid. It is not affiliated with,
+authorised by, endorsed by, or in any way officially connected with the
+Indian Institute of Technology Jodhpur, Masai School, or any of the faculty
+named within it. All course names, brand names and trademarks referenced
+belong to their respective owners.
+
+Nothing here is authoritative. Always check the official Learning Management
+System for the definitive syllabus, schedule and evaluation details.

@@ -46,6 +46,10 @@ root.innerHTML = `
     Other faculty have not stated their counts — check this course's own live session.
   </div>` : ""}
 
-  <footer><p>Student-made study aid, not official IIT Jodhpur or Masai School course material.
-  Always check the LMS for the authoritative syllabus and quiz details.</p></footer>`;
+  <footer>
+    <p class="credit">Compiled by <strong>Rahul Beniwal</strong> &middot;
+      <a href="https://www.linkedin.com/in/iambeniwal/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    <p>Student-made study aid, not official IIT Jodhpur or Masai School course material.
+      Always check the LMS for the authoritative syllabus and quiz details.</p>
+  </footer>`;
 })();

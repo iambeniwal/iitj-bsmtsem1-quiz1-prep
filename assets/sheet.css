@@ -308,3 +308,13 @@ a.course:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 }
 .stub h2{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:9px}
 .stub p{color:var(--ink-2);font-size:15px;max-width:52ch;margin-inline:auto}
+
+/* ---------- footer credit & licence ---------- */
+footer > p + p{margin-top:10px}
+footer .credit{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink-2)}
+footer .credit a{color:var(--blue);text-decoration:none}
+footer .credit a:hover{text-decoration:underline}
+footer .licence{font-size:12px;line-height:1.6;color:var(--ink-3)}
+footer .licence a{color:var(--ink-3);text-decoration:underline}
+footer .licence a:hover{color:var(--blue)}
+footer a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}

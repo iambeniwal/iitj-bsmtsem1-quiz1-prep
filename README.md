@@ -17,6 +17,8 @@ class. Where they disagree, the page says so.
 **These are student-made study aids, not official IIT Jodhpur or Masai School course
 material.** Always check the LMS for the authoritative syllabus and quiz details.
 
+Compiled by **Rahul Beniwal** — [LinkedIn](https://www.linkedin.com/in/iambeniwal/)
+
 ## Layout
 
 ```
@@ -82,3 +84,20 @@ python3 build-standalone.py
 Each becomes one self-contained `dist/*.html` that opens with no server and no
 network — Google Fonts are the only external request, and the fallback stacks
 handle it offline.
+
+## Licence
+
+This repository is **not** covered by a single licence. Three kinds of material sit
+here with three different owners — see [`LICENSE`](LICENSE) for the full notice.
+
+| Material | Licence |
+|---|---|
+| Site code — `assets/*`, `build-standalone.py`, the page shells | **MIT** |
+| Revision notes, trap lists and the question bank | **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)** |
+| Lecture content, faculty examples, direct quotations, and questions reproduced from a course slide deck | **Not licensed here** — property of IIT Jodhpur and the respective faculty |
+
+So: share it with classmates freely, adapt it if you credit and share alike, but
+don't sell it — and be aware that the underlying course material was never mine
+to license in the first place.
+
+Not affiliated with, authorised by or endorsed by IIT Jodhpur or Masai School.
