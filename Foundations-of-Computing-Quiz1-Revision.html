@@ -260,10 +260,11 @@ footer a{color:var(--blue)}
     <p class="sub">Everything examinable from all 16 lectures — compressed for a 20-minute, 60-question sprint. Built from the lecture summaries, full transcripts and the 267-slide course deck.</p>
 
     <dl class="strip">
-      <div class="cell hot"><dt>Quiz date</dt><dd id="dday">Sat 26 Sep<small>8:00 AM IST</small></dd></div>
+      <div class="cell hot"><dt>Quiz date</dt><dd id="dday">Sat 26 Sep<small>5:00 PM IST</small></dd></div>
       <div class="cell hot"><dt>Time left</dt><dd id="countdown">—<small>to start</small></dd></div>
       <div class="cell"><dt>Format</dt><dd>60 MCQ<small>single &amp; multi-correct</small></dd></div>
       <div class="cell"><dt>Duration</dt><dd>20 min<small>20 sec / question</small></dd></div>
+      <div class="cell hot"><dt>Join from</dt><dd>4:45 PM<small>15-min proctoring buffer</small></dd></div>
       <div class="cell"><dt>Weight</dt><dd>15%<small>best 2 of 3 quizzes</small></dd></div>
       <div class="cell"><dt>Syllabus</dt><dd>Lectures 1–16<small>everything to 20 Sep</small></dd></div>
     </dl>
@@ -295,7 +296,7 @@ footer a{color:var(--blue)}
       <div class="card">
         <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">What was announced</h4>
         <ul style="margin:0;padding-left:19px;font-size:14.5px;line-height:1.7">
-          <li><strong>Saturday, 26 September, 8:00 AM</strong> — in the slot where TAs normally run doubt-clearing. Doubt session follows the quiz.</li>
+          <li><strong>Saturday, 26 September, 5:00–5:20 PM IST.</strong> Join from <strong>4:45 PM</strong> — there is a 15-minute buffer for proctoring setup. Delivered on the LMS with dual-device proctoring.</li>
           <li><strong>20 minutes, 60 questions.</strong> His stated rule of thumb: “three questions per minute.”</li>
           <li><strong>MCQ only</strong> — “single correct or multiple correct.” Expect some multi-select.</li>
           <li>Likely delivered as an <strong>online form</strong>; the exam page lists LMS delivery with dual-device proctoring.</li>
@@ -305,6 +306,7 @@ footer a{color:var(--blue)}
       <div class="card">
         <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">Syllabus, in his words</h4>
         <p style="font-size:14.5px">“Whatever lectures you have till tomorrow, that is on <strong>20th of September</strong> — all the lectures that are either in the form of recorded lectures or in the form of live sessions — are the syllabus for the quiz.”</p>
+        <div class="warnbox" style="margin-top:12px;border-left-color:var(--bad);background:var(--bad-soft)"><b>Time correction.</b> In the Live Lecture 3 recording Dr. Pathak said “8am”. The official exam schedule says <strong>5:00–5:20 PM IST</strong>. Go by the schedule — join the LMS from 4:45 PM.</div>
         <div class="warnbox" style="margin-top:12px">
           <b>One ambiguity.</b> He named <em>Working with Lists Part&nbsp;2</em> as the last topic, but <em>Part&nbsp;3</em> (copying lists, tuples) also dropped on 20 September. By his own date rule it is in scope. It is only ~10 minutes of material — learn it.
         </div>
@@ -415,7 +417,7 @@ footer a{color:var(--blue)}
   </section>
 
   <footer>
-    <p>Compiled 22 September 2026 from the IITJ LMS: 16 lecture AI-summaries, 16 full transcripts (512,000 characters) and the shared 267-slide deck. Quiz logistics quoted from the Live Lecture 3 recording of 19 September. Topic weightings are an estimate, not an official mark scheme. <strong>This is a student-made study aid, not official IIT Jodhpur or Masai School course material</strong> — always check the LMS for the authoritative syllabus and quiz details.</p>
+    <p>Compiled 22 September 2026 from the IITJ LMS: 16 lecture AI-summaries, 16 full transcripts (512,000 characters) and the shared 267-slide deck. Quiz logistics from the official exam schedule (timings) and the Live Lecture 3 recording of 19 September (format and syllabus); schedule corrected 26 September. Topic weightings are an estimate, not an official mark scheme. <strong>This is a student-made study aid, not official IIT Jodhpur or Masai School course material</strong> — always check the LMS for the authoritative syllabus and quiz details.</p>
   </footer>
 </div>
 
@@ -1093,7 +1095,7 @@ $("#s-traps").innerHTML=TRAPS.map(([h,p,f])=>
  `<div class="trap"><h4>${esc(h)}</h4><p>${esc(p)}</p><div class="fix">→ ${esc(f)}</div></div>`).join("");
 
 /* ---------- countdown ---------- */
-const EXAM=new Date("2026-09-26T08:00:00+05:30");
+const EXAM=new Date("2026-09-26T17:00:00+05:30");
 function tick(){
   const d=EXAM-new Date();
   const el=$("#countdown");
