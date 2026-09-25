@@ -5,6 +5,15 @@ Technology, Semester 1**. Each course page carries an exam brief, a syllabus map
 topic-by-topic notes drawn from that course's lectures, a trap list, and a timed
 question drill whose pacer matches the real seconds-per-question.
 
+All six are complete: **534 questions** across the six courses, built from every
+in-scope lecture summary, full transcript and slide deck on the LMS.
+
+**All six quizzes use negative marking** — +1 for a correct answer, −0.25 for a
+wrong one, 0 if left blank — and every course counts only its best 2 of 3 scores.
+Exam facts come from each course's official LMS quiz announcement and its attached
+syllabus document, which in several cases contradict what the lecturer said in
+class. Where they disagree, the page says so.
+
 **These are student-made study aids, not official IIT Jodhpur or Masai School course
 material.** Always check the LMS for the authoritative syllabus and quiz details.
 
