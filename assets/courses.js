@@ -14,6 +14,8 @@ window.COURSES = [
     durationMin: 20,
     questions: 60,          // stated by the lecturer in Live Lecture 3
     questionsConfirmed: true,
+    weightPct: 15,          // 3 quizzes x 15%, best 2 of 3 = 30%; final 60%; participation 10%
+    weightNote: "best 2 of 3 quizzes",
     ready: true
   },
   {
@@ -23,9 +25,12 @@ window.COURSES = [
     end:   "2026-09-27T12:30:00+05:30",
     join:  "2026-09-27T12:00:00+05:30",
     durationMin: 15,
-    questions: 45,          // inferred at 3/min — not confirmed by faculty
+    questions: 50,          // lecturer: "40 to 50, can reach 60. No fixed number."
+    questionsRange: "40\u201360",
     questionsConfirmed: false,
-    ready: false
+    weightPct: 20,          // 3 quizzes x 20%, best 2 of 3 = 40%; major exam 60%
+    weightNote: "best 2 of 3 \u00b7 40% total",
+    ready: true
   },
   {
     slug: "algorithmic-thinking-in-business",
@@ -36,6 +41,7 @@ window.COURSES = [
     durationMin: 20,
     questions: 60,
     questionsConfirmed: false,
+    weightPct: null,        // not yet confirmed for this course
     ready: false
   },
   {
@@ -47,6 +53,7 @@ window.COURSES = [
     durationMin: 30,
     questions: 90,
     questionsConfirmed: false,
+    weightPct: null,        // not yet confirmed for this course
     ready: false
   },
   {
@@ -58,6 +65,7 @@ window.COURSES = [
     durationMin: 20,
     questions: 60,
     questionsConfirmed: false,
+    weightPct: null,        // not yet confirmed for this course
     ready: false
   },
   {
@@ -69,6 +77,7 @@ window.COURSES = [
     durationMin: 30,
     questions: 90,
     questionsConfirmed: false,
+    weightPct: null,        // not yet confirmed for this course
     ready: false
   }
 ];
