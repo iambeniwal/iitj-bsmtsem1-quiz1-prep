@@ -95,13 +95,13 @@ function paintStrip(){
      s: sched.start ? QT.fmtTime(sched.start)+" IST" : "", hot:true},
     {k: u && u.state==="past" ? "Status" : "Time left", v: u ? u.text : "—",
      s: u && u.state==="past" ? "quiz finished" : u && u.state==="live" ? "in progress" : "to start", hot:true},
-    {k:"Format", v:`${sched.questionsRange || sched.questions || C.questions.length} MCQ`,
-     s: sched.questionsConfirmed === false ? "no fixed count \u2014 lecturer's words" : "single &amp; multi-correct"},
-    {k:"Duration", v:`${sched.durationMin||"\u2014"} min`,
-     s: sched.durationMin ? `~${Math.round(sched.durationMin*60/(sched.questions||1))} sec / question` : ""},
-    {k:"Join from", v: sched.join ? QT.fmtTime(sched.join) : "\u2014", s:"15-min proctoring buffer", hot:true},
-    {k:"Weight", v: sched.weightPct ? sched.weightPct+"%" : "\u2014", s: sched.weightNote || "per quiz"},
-    {k:"Syllabus", v:`Lectures 1–${C.lectures.length}`, s:C.syllabusNote||""}
+    {k:"Questions", v:`${sched.questions}`, s: sched.types || "MCQ"},
+    {k:"Duration", v:`${sched.durationMin||"—"} min`,
+     s: sched.durationMin ? `${QT.secsPerQ(sched)} sec / question` : ""},
+    {k:"Join from", v: sched.join ? QT.fmtTime(sched.join) : "—", s:"15-min proctoring buffer", hot:true},
+    {k:"Weight", v: sched.weightPct ? sched.weightPct+"%" : "—", s: sched.weightNote || "per quiz"},
+    {k:"Marking", v:"−0.25", s:"for a wrong answer", hot:true},
+    {k:"Syllabus", v: C.scopeShort || "—", s: sched.scope || ""}
   ];
   $("#strip").innerHTML = cells.map(c =>
     `<div class="cell${c.hot?" hot":""}"><dt>${esc(c.k)}</dt><dd>${c.v}<small>${c.s}</small></dd></div>`).join("");

@@ -385,7 +385,9 @@ const SECTIONS={
    <li><strong>1753</strong> — a mob attacked <strong>John Kay's</strong> premises and destroyed his models. Factory owners pirated his design, formed a <strong>&ldquo;Shuttle Club&rdquo;</strong> to fight his patent suits collectively, and Kay <strong>fled to France around 1750</strong>, never profiting from his invention.</li>
    <li><strong>1768</strong> — a mob of spinners broke into <strong>James Hargreaves'</strong> house in <strong>Blackburn</strong>.</li>
   </ul>`},
- {t:"The water frame and the birth of the factory",src:"L#15 · beyond the stated cut-off",h:`
+ {t:"The water frame and the factory — NOT EXAMINABLE",src:"L#15 · out of syllabus",h:`
+  <div class="warnbox" style="border-left-color:var(--good);background:var(--good-soft)"><b>Not in the Quiz 1 syllabus.</b> The official list stops at Live Lecture 3. Revise this last, or not at all.</div>
+
   <p style="font-size:15px"><strong>Richard Arkwright</strong> — originally a <strong>barber and wig maker</strong> — patented the water frame and built the mills that made it pay.</p>
   <ul>
    <li><strong>Cromford Mill, Derbyshire, 1771</strong> — the <strong>first water-powered cotton spinning mill in the world</strong>. Today a <strong>UNESCO World Heritage Site</strong>.</li>
@@ -401,7 +403,9 @@ const SECTIONS={
    <li><strong>1785 — the patents were invalidated</strong>, and expansion became explosive: <strong>143</strong> Arkwright-type water mills by <strong>1788</strong>, and <strong>300</strong> large centralised factories by <strong>1800</strong>.</li>
   </ul>
   <div class="warnbox"><b>1779 — machine-breaking riots in Lancashire</b>, including the burning of Arkwright's mill. Conditions: <b>10–14 hour days</b>, low wages despite soaring productivity, and widespread child labour. This is where the <b>working class</b> and the labour movement come from.</div>`},
- {t:"Steam, and Manchester as Cottonopolis",src:"L#16 · beyond the stated cut-off",h:`
+ {t:"Steam and Manchester — NOT EXAMINABLE",src:"L#16 · out of syllabus",h:`
+  <div class="warnbox" style="border-left-color:var(--good);background:var(--good-soft)"><b>Not in the Quiz 1 syllabus.</b> The official list stops at Live Lecture 3. Revise this last, or not at all.</div>
+
   <h4>What steam changed</h4>
   <div class="scroller"><table><thead><tr><th></th><th>Water frame</th><th>Steam engine</th></tr></thead><tbody>
    <tr><td><strong>Needs</strong></td><td><strong>Running water</strong> — a fast river</td><td><strong>Stored water</strong> plus <strong>coal</strong></td></tr>
@@ -588,62 +592,21 @@ const Q=[
    =================================================================== */
 window.COURSE = {
   slug: "economic-business-history",
+  scopeShort: "Lectures 1–14",
   eyebrow: "IIT Jodhpur · B.S. Management & Technology · Semester 1",
   heading: "Economic &amp; Business History<br>Quiz 1 Revision",
-  sub: "Modules 1 to 3, from all 16 lectures — compressed for a 15-minute MCQ paper. Built from the lecture summaries, full transcripts and the fifteen PDF decks.",
+  sub: "Modules 1 to 3, the examinable 14 lectures — compressed for a 15-minute, 40-question paper with negative marking. Built from the lecture summaries, full transcripts and the fifteen PDF decks.",
 
-  briefTag: "quoted from Live Lecture 3",
-  briefLede: "Dr. Manu Kanchan set out the format in the live session of 20 September. He was unusually specific about some things and deliberately vague about others — both are worth knowing.",
-  briefHtml: `
-    <div class="grid2">
-      <div class="card">
-        <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">What he actually said</h4>
-        <ul style="margin:0;padding-left:19px;font-size:14.5px;line-height:1.7">
-          <li><strong>27 September</strong>, in the usual doubt-clearing slot. The official schedule fixes it at <strong>12:15–12:30 PM</strong> — join from 12:00.</li>
-          <li><strong>15 minutes</strong> (he said &ldquo;15 to 20&rdquo; at one point; the schedule says 15).</li>
-          <li><strong>&ldquo;40 to 50 questions. It can reach to 60 as well. There's no fixed number in the MCQ.&rdquo;</strong> Treat the count as genuinely open.</li>
-          <li><strong>MCQ only</strong> — &ldquo;it will not be any descriptive questions&rdquo;. But: <strong>&ldquo;it may have more than one answer for a single question&rdquo;</strong>.</li>
-          <li>The paper may be marked out of <strong>30 or 40</strong> and scaled to 20 afterwards.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">Marking — not the same as your other courses</h4>
-        <div class="scroller"><table><thead><tr><th>Component</th><th>Weight</th></tr></thead><tbody>
-          <tr><td>Quizzes — 3 held, <strong>best 2 of 3</strong> counted</td><td><strong>40%</strong> (2 &times; 20%)</td></tr>
-          <tr><td>Major examination (December)</td><td><strong>60%</strong></td></tr>
-        </tbody></table></div>
-        <div class="warnbox" style="margin-top:12px">
-          <b>Each quiz here is worth 20%</b>, not the 15% you get in Foundations of Computing — and this course has <b>no class-participation component</b>. Confirmed on the &ldquo;Course Outline and Evaluation&rdquo; deck, so this is the authoritative version.
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:14px;border-left:3px solid var(--clay)">
-      <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">The syllabus, and its one ambiguity</h4>
-      <p style="font-size:14.5px;color:var(--ink-2)">He gave the scope twice, in two ways that do not quite line up:</p>
-      <ul style="margin:10px 0 0;padding-left:19px;font-size:14.5px;line-height:1.7">
-        <li><strong>The narrow reading:</strong> &ldquo;the syllabus which is there is <strong>till lecture 10</strong>&hellip; including today's lecture.&rdquo; He said this several times. His numbered decks stop at <em>Lec 10</em>, which is <em>Beginning of Machines Usage</em> — and lectures #15 and #16 have <strong>no deck at all</strong>, which supports this reading.</li>
-        <li><strong>The broad reading:</strong> &ldquo;whatever videos have been released till today, that is <strong>till 20th of September</strong>, all those things will be part of the quiz&rdquo;, and separately &ldquo;the syllabus covered in <strong>15 to 16 sessions</strong> will come under this particular quiz.&rdquo;</li>
-      </ul>
-      <p style="font-size:14.5px;margin-top:11px"><strong>This sheet covers everything</strong>, with the two sections beyond the stated cut-off — the water frame and factories, and steam and Manchester — marked as such. They are also the most memorable material in the course, so they are cheap to learn either way.</p>
-    </div>
-
-    <div class="card" style="margin-top:14px">
-      <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">Sitting a paper with no fixed question count</h4>
-      <p style="font-size:14.5px;color:var(--ink-2)">15 minutes for somewhere between 40 and 60 questions is <strong>15 to 22 seconds each</strong>. Three consequences:</p>
-      <ul style="margin:10px 0 0;padding-left:19px;font-size:14.5px;line-height:1.7">
-        <li><strong>Scroll to the end first</strong> and see how many there actually are, then set your pace. He warned the count could be at the top of the range.</li>
-        <li><strong>Dates and names are the whole game.</strong> At this speed you cannot reason — Kay 1733, Hargreaves 1764, Arkwright 1768/9, Watt 1781, Midland Revolt 1607, Henry II 1155.</li>
-        <li><strong>Multi-answer questions exist.</strong> He confirmed it. Read the stem, commit, move on.</li>
-      </ul>
-    </div>`,
+  briefTag: "from the official LMS announcement",
+  briefLede: "Every figure below is from the official Quiz 1 announcement on the LMS and the syllabus document attached to it. Dr. Kanchan was deliberately vague about the question count in class; the announcement is not.",
+  briefHtml: "<div class=\"grid2\">\n      <div class=\"card\">\n        <h4 style=\"font-family:var(--display);font-size:16px;margin-bottom:9px\">Confirmed on the official announcement</h4>\n        <div class=\"scroller\"><table><tbody>\n          <tr><td><strong>Date</strong></td><td>Sunday 27 September</td></tr>\n          <tr><td><strong>Window</strong></td><td>12:15–12:30 PM IST · join from <strong>12:00 PM</strong></td></tr>\n          <tr><td><strong>Questions</strong></td><td><strong>40</strong>, for <strong>40 marks</strong></td></tr>\n          <tr><td><strong>Type</strong></td><td>MCQ</td></tr>\n          <tr><td><strong>Weight</strong></td><td>20% · best 2 of 3 · 40% of the course total</td></tr>\n        </tbody></table></div>\n        <div class=\"warnbox\" style=\"margin-top:12px;border-left-color:var(--bad);background:var(--bad-soft)\">\n          <b>Negative marking.</b> +1 correct, <strong>−0.25 for a wrong answer</strong>, 0 if left blank.\n        </div>\n        <p style=\"font-size:13.5px;color:var(--ink-3);margin-top:11px\">In Live Lecture 3 Dr. Kanchan said &ldquo;40 to 50, can reach 60, there's no fixed number&rdquo;. The announcement settles it at <strong>40</strong>.</p>\n      </div>\n      <div class=\"card\">\n        <h4 style=\"font-family:var(--display);font-size:16px;margin-bottom:9px\">Syllabus — settled</h4>\n        <p style=\"font-size:14.5px\">The announcement attaches an official syllabus document listing the examinable lectures. It runs <strong>#1 to #14</strong> and stops at <strong>Live Lecture 3</strong>.</p>\n        <div class=\"warnbox\" style=\"margin-top:12px;border-left-color:var(--good);background:var(--good-soft)\">\n          <b>#15 and #16 are OUT.</b> <em>Rise of Factories</em> (water frame, Arkwright) and <em>Steam Engine</em> (Watt, Manchester) are <strong>not examinable</strong>. This confirms the narrow reading of his &ldquo;till lecture 10&rdquo; — those two sections stay on this page, marked, but revise them last.\n        </div>\n        <p style=\"font-size:14.5px;margin-top:11px\">So the real scope is <strong>Module 1, Module 2, and Module 3 up to <em>Beginning of Machines Usage</em></strong> — the flying shuttle and spinning jenny, but not what came after.</p>\n      </div>\n    </div>\n\n    <div class=\"card\" style=\"margin-top:14px;border-left:3px solid var(--clay)\">\n      <h4 style=\"font-family:var(--display);font-size:16px;margin-bottom:9px\">The two constraints: 22 seconds, and −0.25</h4>\n      <p style=\"font-size:14.5px;color:var(--ink-2)\">40 questions in 15 minutes is <strong>22 seconds each</strong>. This is a dates-and-names paper — there is no time to reason, and a wrong answer now costs you a quarter mark.</p>\n      <div class=\"scroller\" style=\"margin-top:11px\"><table><thead><tr><th>Situation</th><th>Expected value</th><th>Do</th></tr></thead><tbody>\n        <tr><td>You know it</td><td><strong>+1.00</strong></td><td>Answer</td></tr>\n        <tr><td>You can rule out two of four</td><td><strong>+0.38</strong></td><td>Answer — clearly worth it</td></tr>\n        <tr><td>You can rule out one of four</td><td><strong>+0.17</strong></td><td>Answer</td></tr>\n        <tr><td>Blind guess between four</td><td><strong>+0.06</strong></td><td>Answer, but it gains you next to nothing</td></tr>\n        <tr><td>Leave it blank</td><td><strong>0.00</strong></td><td>Only if you are genuinely lost</td></tr>\n      </tbody></table></div>\n      <ul style=\"margin:11px 0 0;padding-left:19px;font-size:14.5px;line-height:1.7\">\n        <li><strong>The dates are the paper.</strong> Kay 1733, Hargreaves 1764, Midland Revolt 1607, Henry II 1155, Jethro Tull 1701, License Raj 1948–1991, Bajaj 1945/1960/1971.</li>\n        <li><strong>Eliminate before you guess.</strong> With four options, ruling out one nearly triples what a guess is worth.</li>\n        <li>He confirmed in class that <strong>some questions have more than one correct answer</strong>, even though the announcement just says MCQ.</li>\n      </ul>\n    </div>",
 
   mapLede: "All 16 lectures, taught by Dr. Manu Kanchan. The three live sessions revise the recorded ones, so anything repeated in both is worth twice the attention.",
   syllabusNote: "Modules 1–3",
 
   drillLede: "Questions written from the lectures, the transcripts and the decks. There is no official practice set for this course — unlike Foundations of Computing, the decks carry no &ldquo;test your knowledge&rdquo; slides. Turn the pacer on to rehearse the real tempo.",
 
-  footer: "Compiled 26 September 2026 from the IITJ LMS: 16 lecture AI-summaries, 16 full transcripts (785,000 characters) and 15 PDF decks. Quiz format and syllabus quoted from the Live Lecture 3 recording of 20 September; weighting from the &ldquo;Course Outline and Evaluation&rdquo; deck; timings from the official exam schedule. Topic weightings are an estimate, not an official mark scheme. <strong>This is a student-made study aid, not official IIT Jodhpur or Masai School course material</strong> — always check the LMS for the authoritative syllabus and quiz details.",
+  footer: "Compiled 26 September 2026 from the IITJ LMS: 16 lecture AI-summaries, 16 full transcripts (785,000 characters) and 15 PDF decks. Quiz format and syllabus quoted from the Live Lecture 3 recording of 20 September; weighting from the &ldquo;Course Outline and Evaluation&rdquo; deck; timings, question count, marking scheme and syllabus scope from the official LMS quiz announcement and its attached syllabus document, read 26 September. Topic weightings are an estimate, not an official mark scheme. <strong>This is a student-made study aid, not official IIT Jodhpur or Masai School course material</strong> — always check the LMS for the authoritative syllabus and quiz details.",
 
   lectures: LECTURES,
   weights:  WEIGHTS,
