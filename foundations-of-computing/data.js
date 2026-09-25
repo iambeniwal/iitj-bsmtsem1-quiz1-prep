@@ -1,427 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex, nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Foundations of Computing Quiz 1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap">
-
-<style>
-:root{
-  --paper:#F4F6FA;
-  --surface:#FFFFFF;
-  --surface-2:#EDF1F8;
-  --ink:#141D33;
-  --ink-2:#44526E;
-  --ink-3:#6C7A96;
-  --rule:#D5DCE9;
-  --rule-2:#C2CCDE;
-  --blue:#2F5FD0;
-  --blue-soft:#E4EBFB;
-  --clay:#C4661F;
-  --clay-soft:#FBEADB;
-  --good:#1F7A57;
-  --good-soft:#DFF1E9;
-  --bad:#B3392C;
-  --bad-soft:#FADFDB;
-  --shadow:0 1px 2px rgba(20,29,51,.06), 0 8px 24px -12px rgba(20,29,51,.18);
-  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
-  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#0E1524;
-    --surface:#162034;
-    --surface-2:#1D2940;
-    --ink:#E8EDF7;
-    --ink-2:#B4C0D6;
-    --ink-3:#8593AE;
-    --rule:#2A3550;
-    --rule-2:#3A4866;
-    --blue:#7FA3F5;
-    --blue-soft:#1C2B4D;
-    --clay:#E49151;
-    --clay-soft:#3A2818;
-    --good:#5FC79E;
-    --good-soft:#12301F;
-    --bad:#F08A7C;
-    --bad-soft:#3A1A17;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#0E1524;
-  --surface:#162034;
-  --surface-2:#1D2940;
-  --ink:#E8EDF7;
-  --ink-2:#B4C0D6;
-  --ink-3:#8593AE;
-  --rule:#2A3550;
-  --rule-2:#3A4866;
-  --blue:#7FA3F5;
-  --blue-soft:#1C2B4D;
-  --clay:#E49151;
-  --clay-soft:#3A2818;
-  --good:#5FC79E;
-  --good-soft:#12301F;
-  --bad:#F08A7C;
-  --bad-soft:#3A1A17;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
-}
-
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--body);
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1000px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
-h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
-p{margin:0}
-code,kbd{font-family:var(--mono);font-size:.88em}
-
-/* ---------- masthead ---------- */
-.mast{padding-block:34px 22px;border-bottom:2px solid var(--ink);}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
-.mast h1{font-size:clamp(30px,6.2vw,50px);font-weight:800;line-height:1.02}
-.mast .sub{margin-top:10px;color:var(--ink-2);max-width:62ch;font-size:16.5px}
-
-/* ---------- countdown strip ---------- */
-.strip{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));
-  gap:1px;background:var(--rule);border:1px solid var(--rule);
-  margin-top:22px;border-radius:3px;overflow:hidden;
-}
-.cell{background:var(--surface);padding:12px 14px}
-.cell dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
-.cell dd{margin:0;font-family:var(--display);font-weight:700;font-size:19px;font-variant-numeric:tabular-nums;line-height:1.2}
-.cell dd small{display:block;font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--ink-3);letter-spacing:0}
-.cell.hot dd{color:var(--clay)}
-
-/* ---------- nav ---------- */
-nav{
-  position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
-  background:color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--rule);
-  margin-top:26px;
-}
-.navrow{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding-block:7px}
-.navrow::-webkit-scrollbar{display:none}
-.navrow button{
-  flex:0 0 auto;background:none;border:0;cursor:pointer;
-  font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink-3);
-  padding:7px 12px;border-radius:3px;white-space:nowrap;
-}
-.navrow button:hover{color:var(--ink);background:var(--surface-2)}
-.navrow button[aria-current="true"]{color:var(--surface);background:var(--ink)}
-.navrow button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-
-section{padding-block:38px;scroll-margin-top:72px}
-section + section{border-top:1px solid var(--rule)}
-.sechead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.sechead h2{font-size:clamp(21px,3.6vw,28px);font-weight:700}
-.tag{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-3);border:1px solid var(--rule-2);border-radius:99px;padding:2px 9px;
-}
-.lede{color:var(--ink-2);max-width:66ch;margin-bottom:20px}
-
-/* ---------- generic blocks ---------- */
-.card{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:18px 20px}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:14px}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-
-table{width:100%;border-collapse:collapse;font-size:14.5px}
-.scroller{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
-th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--rule);vertical-align:top}
-thead th{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-3);background:var(--surface-2);position:sticky;top:0;
-}
-tbody tr:last-child td{border-bottom:0}
-td code{background:var(--surface-2);padding:1px 5px;border-radius:3px}
-
-/* ---------- syllabus list ---------- */
-.lec{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline;
-  padding:9px 0;border-bottom:1px dotted var(--rule-2)}
-.lec:last-child{border-bottom:0}
-.lec .n{font-family:var(--mono);font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
-.lec .t{font-weight:600;font-size:15px}
-.lec .t em{display:block;font-style:normal;font-weight:400;font-size:13px;color:var(--ink-3)}
-.lec .w{font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:99px;white-space:nowrap}
-.w.live{background:var(--clay-soft);color:var(--clay)}
-.w.rec{background:var(--blue-soft);color:var(--blue)}
-
-/* ---------- topic weight bars ---------- */
-.wbar{display:grid;grid-template-columns:1fr 120px 42px;gap:12px;align-items:center;padding:7px 0}
-.wbar .lab{font-size:14.5px;font-weight:600}
-.wbar .track{height:7px;background:var(--surface-2);border-radius:99px;overflow:hidden}
-.wbar .fill{height:100%;background:var(--blue);border-radius:99px}
-.wbar .num{font-family:var(--mono);font-size:12px;color:var(--ink-3);text-align:right;font-variant-numeric:tabular-nums}
-
-/* ---------- fact blocks ---------- */
-.topic{background:var(--surface);border:1px solid var(--rule);border-radius:4px;margin-bottom:14px;overflow:hidden}
-.topic > summary{
-  cursor:pointer;padding:14px 18px;font-family:var(--display);font-weight:700;font-size:16.5px;
-  display:flex;align-items:center;gap:10px;list-style:none;
-}
-.topic > summary::-webkit-details-marker{display:none}
-.topic > summary::before{
-  content:"";width:7px;height:7px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);
-  transform:rotate(-45deg);transition:transform .15s;flex:0 0 auto;margin-left:2px;
-}
-.topic[open] > summary::before{transform:rotate(45deg)}
-.topic > summary:hover{background:var(--surface-2)}
-.topic > summary .src{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);font-weight:400}
-.tbody{padding:2px 18px 18px;border-top:1px solid var(--rule)}
-.tbody > * + *{margin-top:13px}
-.tbody h4{font-family:var(--body);font-weight:700;font-size:14px;letter-spacing:.02em;color:var(--ink-2);text-transform:uppercase;margin-top:18px}
-.tbody ul{margin:0;padding-left:19px}
-.tbody li{margin:4px 0}
-.tbody li strong{font-weight:700}
-
-.def{border-left:3px solid var(--blue);background:var(--blue-soft);padding:11px 14px;border-radius:0 4px 4px 0;font-size:15px}
-.def b{font-family:var(--display)}
-.warnbox{border-left:3px solid var(--clay);background:var(--clay-soft);padding:11px 14px;border-radius:0 4px 4px 0;font-size:14.5px}
-.warnbox b{font-family:var(--display)}
-
-pre{
-  margin:0;background:var(--surface-2);border:1px solid var(--rule);border-radius:4px;
-  padding:12px 14px;overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.55;
-}
-pre .c{color:var(--ink-3)}
-pre .o{color:var(--clay)}
-
-/* ---------- trap cards ---------- */
-.trap{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--clay);border-radius:0 4px 4px 0;padding:14px 16px}
-.trap h4{font-family:var(--display);font-size:15px;font-weight:700;margin-bottom:5px}
-.trap p{font-size:14px;color:var(--ink-2)}
-.trap .fix{margin-top:7px;font-size:13.5px;font-family:var(--mono);color:var(--good)}
-
-/* ---------- drill ---------- */
-.drillbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
-.btn{
-  font-family:var(--display);font-weight:600;font-size:14px;cursor:pointer;
-  padding:8px 15px;border-radius:3px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
-}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule-2)}
-.btn:hover{opacity:.87}
-.btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.btn[disabled]{opacity:.4;cursor:default}
-select{
-  font-family:var(--body);font-size:14px;padding:8px 10px;border-radius:3px;
-  border:1px solid var(--rule-2);background:var(--surface);color:var(--ink);
-}
-.score{margin-left:auto;font-family:var(--mono);font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
-
-.qmeta{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
-.qnum{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.06em}
-.qtopic{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--surface-2);color:var(--ink-3);padding:2px 8px;border-radius:99px}
-.qtopic.official{background:var(--clay-soft);color:var(--clay)}
-.clock{margin-left:auto;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink-3)}
-.clock.low{color:var(--bad);font-weight:700}
-.qtext{font-family:var(--display);font-size:18px;font-weight:600;line-height:1.35;margin-bottom:14px}
-.opts{display:grid;gap:8px}
-.opt{
-  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
-  background:var(--surface);border:1px solid var(--rule-2);border-radius:4px;
-  padding:11px 14px;cursor:pointer;font-family:var(--body);font-size:15px;color:var(--ink);line-height:1.45;
-}
-.opt:hover:not([disabled]){border-color:var(--blue);background:var(--blue-soft)}
-.opt[disabled]{cursor:default}
-.opt .k{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink-3);flex:0 0 auto;padding-top:2px}
-.opt.right{background:var(--good-soft);border-color:var(--good)}
-.opt.right .k{color:var(--good)}
-.opt.wrong{background:var(--bad-soft);border-color:var(--bad)}
-.opt.wrong .k{color:var(--bad)}
-.opt:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.why{margin-top:13px;padding:11px 14px;border-radius:4px;background:var(--surface-2);font-size:14.5px;color:var(--ink-2);border-left:3px solid var(--blue)}
-.why b{color:var(--ink);font-family:var(--display)}
-.donecard{text-align:center;padding:34px 20px}
-.donecard .big{font-family:var(--display);font-size:46px;font-weight:800;font-variant-numeric:tabular-nums}
-.donecard p{color:var(--ink-2);margin-top:6px}
-.weak{margin-top:16px;text-align:left;max-width:420px;margin-inline:auto}
-.weak div{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;border-bottom:1px dotted var(--rule-2)}
-
-footer{padding-block:26px;border-top:2px solid var(--ink);color:var(--ink-3);font-size:13px}
-footer a{color:var(--blue)}
-@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
-</style>
-
-<div class="wrap">
-
-  <header class="mast">
-    <div class="eyebrow">IIT Jodhpur · B.S. Management &amp; Technology · Semester 1</div>
-    <h1>Foundations of Computing<br>Quiz 1 Revision</h1>
-    <p class="sub">Everything examinable from all 16 lectures — compressed for a 20-minute, 60-question sprint. Built from the lecture summaries, full transcripts and the 267-slide course deck.</p>
-
-    <dl class="strip">
-      <div class="cell hot"><dt>Quiz date</dt><dd id="dday">Sat 26 Sep<small>5:00 PM IST</small></dd></div>
-      <div class="cell hot"><dt>Time left</dt><dd id="countdown">—<small>to start</small></dd></div>
-      <div class="cell"><dt>Format</dt><dd>60 MCQ<small>single &amp; multi-correct</small></dd></div>
-      <div class="cell"><dt>Duration</dt><dd>20 min<small>20 sec / question</small></dd></div>
-      <div class="cell hot"><dt>Join from</dt><dd>4:45 PM<small>15-min proctoring buffer</small></dd></div>
-      <div class="cell"><dt>Weight</dt><dd>15%<small>best 2 of 3 quizzes</small></dd></div>
-      <div class="cell"><dt>Syllabus</dt><dd>Lectures 1–16<small>everything to 20 Sep</small></dd></div>
-    </dl>
-  </header>
-
-  <nav>
-    <div class="navrow" id="nav">
-      <button data-go="brief" aria-current="true">Exam brief</button>
-      <button data-go="map">Syllabus map</button>
-      <button data-go="computing">Computing &amp; IPO</button>
-      <button data-go="data">Data &amp; DIKW</button>
-      <button data-go="classify">Data classification</button>
-      <button data-go="algo">Algorithms</button>
-      <button data-go="hardware">Hardware</button>
-      <button data-go="software">Software &amp; OS</button>
-      <button data-go="python">Python</button>
-      <button data-go="lists">Lists &amp; tuples</button>
-      <button data-go="traps">Traps</button>
-      <button data-go="drill">Drill · 104 Q</button>
-    </div>
-  </nav>
-
-  <!-- ============ BRIEF ============ -->
-  <section id="brief">
-    <div class="sechead"><h2>The exam brief</h2><span class="tag">verified from Live Lecture 3</span></div>
-    <p class="lede">Dr. Aman Pathak announced the quiz format live on 19 September. These details come from that recording, not from guesswork.</p>
-
-    <div class="grid2">
-      <div class="card">
-        <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">What was announced</h4>
-        <ul style="margin:0;padding-left:19px;font-size:14.5px;line-height:1.7">
-          <li><strong>Saturday, 26 September, 5:00–5:20 PM IST.</strong> Join from <strong>4:45 PM</strong> — there is a 15-minute buffer for proctoring setup. Delivered on the LMS with dual-device proctoring.</li>
-          <li><strong>20 minutes, 60 questions.</strong> His stated rule of thumb: “three questions per minute.”</li>
-          <li><strong>MCQ only</strong> — “single correct or multiple correct.” Expect some multi-select.</li>
-          <li>Likely delivered as an <strong>online form</strong>; the exam page lists LMS delivery with dual-device proctoring.</li>
-          <li><strong>Best 2 of 3 quizzes count.</strong> A missed attempt scores zero, so this one is effectively free insurance for the other two.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">Syllabus, in his words</h4>
-        <p style="font-size:14.5px">“Whatever lectures you have till tomorrow, that is on <strong>20th of September</strong> — all the lectures that are either in the form of recorded lectures or in the form of live sessions — are the syllabus for the quiz.”</p>
-        <div class="warnbox" style="margin-top:12px;border-left-color:var(--bad);background:var(--bad-soft)"><b>Time correction.</b> In the Live Lecture 3 recording Dr. Pathak said “8am”. The official exam schedule says <strong>5:00–5:20 PM IST</strong>. Go by the schedule — join the LMS from 4:45 PM.</div>
-        <div class="warnbox" style="margin-top:12px">
-          <b>One ambiguity.</b> He named <em>Working with Lists Part&nbsp;2</em> as the last topic, but <em>Part&nbsp;3</em> (copying lists, tuples) also dropped on 20 September. By his own date rule it is in scope. It is only ~10 minutes of material — learn it.
-        </div>
-        <div class="warnbox" style="margin-top:10px;border-left-color:var(--good);background:var(--good-soft)">
-          <b>Out of scope.</b> The course deck runs on to <code>if</code> statements, dictionaries, <code>while</code> loops and functions. None of that has been lectured yet. Don't revise it.
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:14px;border-left:3px solid var(--clay)">
-      <h4 style="font-family:var(--display);font-size:16px;margin-bottom:9px">The real constraint: 20 seconds per question</h4>
-      <p style="font-size:14.5px;color:var(--ink-2)">This is a recall test, not a reasoning test. You cannot derive anything — you either know it cold or you lose the question. Three consequences for how you revise and sit it:</p>
-      <ul style="margin:10px 0 0;padding-left:19px;font-size:14.5px;line-height:1.7">
-        <li><strong>Drill recognition, not understanding.</strong> Definitions, the classification trees, and which Python method does what are the whole game.</li>
-        <li><strong>Never re-read a question.</strong> If the answer isn't there in ~15 seconds, mark a guess and move. 60 attempted beats 45 perfected.</li>
-        <li><strong>Watch for multi-correct.</strong> Read the stem for “select all”, then commit. Don't audit your single-select answers for hidden second options.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ MAP ============ -->
-  <section id="map">
-    <div class="sechead"><h2>Syllabus map</h2><span class="tag">16 lectures</span></div>
-    <p class="lede">All 16 lectures in scope. The three live sessions largely re-teach the recorded ones, which is a useful signal: material repeated across both is what he thinks matters.</p>
-
-    <div class="grid2">
-      <div class="card">
-        <h4 style="font-family:var(--display);font-size:16px;margin-bottom:6px">Where the marks probably sit</h4>
-        <p style="font-size:13.5px;color:var(--ink-3);margin-bottom:10px">Estimated from how much lecture time each topic got. Not official.</p>
-        <div id="weights"></div>
-      </div>
-      <div class="card">
-        <h4 style="font-family:var(--display);font-size:16px;margin-bottom:6px">Lecture list</h4>
-        <div id="lectures"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTENT SECTIONS injected ============ -->
-  <section id="computing">
-    <div class="sechead"><h2>Computing &amp; the IPO model</h2><span class="tag">Lectures 1, 2, 4, 9</span></div>
-    <p class="lede">The single most repeated idea in the course. He said explicitly: when asked to define computing, <em>do not mention computers</em>.</p>
-    <div id="s-computing"></div>
-  </section>
-
-  <section id="data">
-    <div class="sechead"><h2>Data &amp; the DIKW chain</h2><span class="tag">Lectures 2, 9</span></div>
-    <p class="lede">Pillar 1 of computing, plus the four-layer ladder he taught twice with two full case studies.</p>
-    <div id="s-data"></div>
-  </section>
-
-  <section id="classify">
-    <div class="sechead"><h2>Data classification</h2><span class="tag">Lectures 3, 5, 9, 14 · heaviest topic</span></div>
-    <p class="lede">Four independent classification schemes. Every one of the nine official practice MCQs in the deck comes from this section — treat that as a strong hint.</p>
-    <div id="s-classify"></div>
-  </section>
-
-  <section id="algo">
-    <div class="sechead"><h2>Algorithms</h2><span class="tag">Lectures 5, 14</span></div>
-    <p class="lede">Pillar 2. The five properties are near-certain exam material — he listed them in both the recorded lecture and the live revision.</p>
-    <div id="s-algo"></div>
-  </section>
-
-  <section id="hardware">
-    <div class="sechead"><h2>Hardware</h2><span class="tag">Lectures 6, 14</span></div>
-    <p class="lede">Pillar 3. Know the CPU/GPU contrast and the volatile/non-volatile memory split — those are the two comparisons he kept returning to.</p>
-    <div id="s-hardware"></div>
-  </section>
-
-  <section id="software">
-    <div class="sechead"><h2>Software, OS &amp; utilities</h2><span class="tag">Lectures 6, 7, 14</span></div>
-    <p class="lede">Pillar 4, in three layers: system → utility → application. Plus the interpreter/compiler split that leads into Python.</p>
-    <div id="s-software"></div>
-  </section>
-
-  <section id="python">
-    <div class="sechead"><h2>Python basics</h2><span class="tag">Lectures 7, 8, 10, 14</span></div>
-    <p class="lede">Variables, strings, numbers, comments and Colab. Syntax questions here are the easiest marks on the paper.</p>
-    <div id="s-python"></div>
-  </section>
-
-  <section id="lists">
-    <div class="sechead"><h2>Lists, slicing &amp; tuples</h2><span class="tag">Lectures 11–13, 15, 16</span></div>
-    <p class="lede">Five lectures — the largest Python block, and the most recent, so it is fresh in the question-setter's mind too.</p>
-    <div id="s-lists"></div>
-  </section>
-
-  <!-- ============ TRAPS ============ -->
-  <section id="traps">
-    <div class="sechead"><h2>The traps</h2><span class="tag">high-yield</span></div>
-    <p class="lede">Twelve distinctions that MCQ writers reach for because the wrong answer is so tempting. If you only have ten minutes before the quiz, read this section.</p>
-    <div class="grid2" id="s-traps"></div>
-  </section>
-
-  <!-- ============ DRILL ============ -->
-  <section id="drill">
-    <div class="sechead"><h2>Drill</h2><span class="tag" id="qcount">— questions</span></div>
-    <p class="lede">Nine of these are the actual “Test your knowledge” questions from the course deck — marked <span style="font-family:var(--mono);font-size:11px;background:var(--clay-soft);color:var(--clay);padding:1px 7px;border-radius:99px">FROM DECK</span>. The rest are written from the lectures. Turn the pacer on to rehearse the real 20-second clock.</p>
-
-    <div class="drillbar">
-      <select id="filter" aria-label="Filter questions by topic"></select>
-      <button class="btn ghost" id="pacer" aria-pressed="false">Pacer: off</button>
-      <button class="btn ghost" id="restart">Restart</button>
-      <span class="score" id="score">0 / 0</span>
-    </div>
-
-    <div class="card" id="qcard"></div>
-  </section>
-
-  <footer>
-    <p>Compiled 22 September 2026 from the IITJ LMS: 16 lecture AI-summaries, 16 full transcripts (512,000 characters) and the shared 267-slide deck. Quiz logistics from the official exam schedule (timings) and the Live Lecture 3 recording of 19 September (format and syllabus); schedule corrected 26 September. Topic weightings are an estimate, not an official mark scheme. <strong>This is a student-made study aid, not official IIT Jodhpur or Masai School course material</strong> — always check the LMS for the authoritative syllabus and quiz details.</p>
-  </footer>
-</div>
-
-<script>
 /* ========================= DATA ========================= */
 const LECTURES=[
  [1,"Introduction — Foundations of Computing","Course aims, why Python","rec"],
@@ -1071,169 +647,88 @@ const Q=[
 {t:"Lists & tuples",q:"Which are FUNCTIONS rather than list methods? (Select all)",multi:true,c:["len()","sorted()","sort()","reverse()"],a:[0,1],w:"len() and sorted() are functions — the list goes in the parentheses. sort() and reverse() are methods, called with dot notation."}
 ];
 
-/* ========================= RENDER ========================= */
-const $=s=>document.querySelector(s);
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/* ===================================================================
+   Assemble the course object the shared renderer consumes.
+   =================================================================== */
+const SECTION_META = [
+ {
+  "id": "computing",
+  "title": "Computing &amp; the IPO model",
+  "tag": "Lectures 1, 2, 4, 9",
+  "lede": "The single most repeated idea in the course. He said explicitly: when asked to define computing, <em>do not mention computers</em>.",
+  "navLabel": "Computing & IPO"
+ },
+ {
+  "id": "data",
+  "title": "Data &amp; the DIKW chain",
+  "tag": "Lectures 2, 9",
+  "lede": "Pillar 1 of computing, plus the four-layer ladder he taught twice with two full case studies.",
+  "navLabel": "Data & DIKW"
+ },
+ {
+  "id": "classify",
+  "title": "Data classification",
+  "tag": "Lectures 3, 5, 9, 14 · heaviest topic",
+  "lede": "Four independent classification schemes. Every one of the nine official practice MCQs in the deck comes from this section — treat that as a strong hint.",
+  "navLabel": "Data classification"
+ },
+ {
+  "id": "algo",
+  "title": "Algorithms",
+  "tag": "Lectures 5, 14",
+  "lede": "Pillar 2. The five properties are near-certain exam material — he listed them in both the recorded lecture and the live revision.",
+  "navLabel": "Algorithms"
+ },
+ {
+  "id": "hardware",
+  "title": "Hardware",
+  "tag": "Lectures 6, 14",
+  "lede": "Pillar 3. Know the CPU/GPU contrast and the volatile/non-volatile memory split — those are the two comparisons he kept returning to.",
+  "navLabel": "Hardware"
+ },
+ {
+  "id": "software",
+  "title": "Software, OS &amp; utilities",
+  "tag": "Lectures 6, 7, 14",
+  "lede": "Pillar 4, in three layers: system → utility → application. Plus the interpreter/compiler split that leads into Python.",
+  "navLabel": "Software & OS"
+ },
+ {
+  "id": "python",
+  "title": "Python basics",
+  "tag": "Lectures 7, 8, 10, 14",
+  "lede": "Variables, strings, numbers, comments and Colab. Syntax questions here are the easiest marks on the paper.",
+  "navLabel": "Python"
+ },
+ {
+  "id": "lists",
+  "title": "Lists, slicing &amp; tuples",
+  "tag": "Lectures 11–13, 15, 16",
+  "lede": "Five lectures — the largest Python block, and the most recent, so it is fresh in the question-setter's mind too.",
+  "navLabel": "Lists & tuples"
+ }
+];
 
-// weights
-$("#weights").innerHTML=WEIGHTS.map(([l,v])=>
- `<div class="wbar"><span class="lab">${esc(l)}</span><span class="track"><span class="fill" style="width:${v*100/22}%"></span></span><span class="num">~${v}%</span></div>`).join("");
+window.COURSE = {
+  slug: "foundations-of-computing",
+  eyebrow: "IIT Jodhpur \u00b7 B.S. Management & Technology \u00b7 Semester 1",
+  heading: "Foundations of Computing<br>Quiz 1 Revision",
+  sub: "Everything examinable from all 16 lectures \u2014 compressed for a 20-minute, 60-question sprint. Built from the lecture summaries, full transcripts and the 267-slide course deck.",
 
-// lectures
-$("#lectures").innerHTML=LECTURES.map(([n,t,s,k])=>
- `<div class="lec"><span class="n">${String(n).padStart(2,"0")}</span><span class="t">${esc(t)}<em>${esc(s)}</em></span><span class="w ${k}">${k==="live"?"live":"rec"}</span></div>`).join("");
+  briefTag:  "verified from Live Lecture 3",
+  briefLede: "Dr. Aman Pathak announced the quiz format live on 19 September, and the official schedule sets the timing. These details come from those two sources, not from guesswork.",
+  briefHtml: "<div class=\"grid2\">\n      <div class=\"card\">\n        <h4 style=\"font-family:var(--display);font-size:16px;margin-bottom:9px\">What was announced</h4>\n        <ul style=\"margin:0;padding-left:19px;font-size:14.5px;line-height:1.7\">\n          <li><strong>Saturday, 26 September, 5:00–5:20 PM IST.</strong> Join from <strong>4:45 PM</strong> — there is a 15-minute buffer for proctoring setup. Delivered on the LMS with dual-device proctoring.</li>\n          <li><strong>20 minutes, 60 questions.</strong> His stated rule of thumb: “three questions per minute.”</li>\n          <li><strong>MCQ only</strong> — “single correct or multiple correct.” Expect some multi-select.</li>\n          <li>Likely delivered as an <strong>online form</strong>; the exam page lists LMS delivery with dual-device proctoring.</li>\n          <li><strong>Best 2 of 3 quizzes count.</strong> A missed attempt scores zero, so this one is effectively free insurance for the other two.</li>\n        </ul>\n      </div>\n      <div class=\"card\">\n        <h4 style=\"font-family:var(--display);font-size:16px;margin-bottom:9px\">Syllabus, in his words</h4>\n        <p style=\"font-size:14.5px\">“Whatever lectures you have till tomorrow, that is on <strong>20th of September</strong> — all the lectures that are either in the form of recorded lectures or in the form of live sessions — are the syllabus for the quiz.”</p>\n        <div class=\"warnbox\" style=\"margin-top:12px;border-left-color:var(--bad);background:var(--bad-soft)\"><b>Time correction.</b> In the Live Lecture 3 recording Dr. Pathak said “8am”. The official exam schedule says <strong>5:00–5:20 PM IST</strong>. Go by the schedule — join the LMS from 4:45 PM.</div>\n        <div class=\"warnbox\" style=\"margin-top:12px\">\n          <b>One ambiguity.</b> He named <em>Working with Lists Part&nbsp;2</em> as the last topic, but <em>Part&nbsp;3</em> (copying lists, tuples) also dropped on 20 September. By his own date rule it is in scope. It is only ~10 minutes of material — learn it.\n        </div>\n        <div class=\"warnbox\" style=\"margin-top:10px;border-left-color:var(--good);background:var(--good-soft)\">\n          <b>Out of scope.</b> The course deck runs on to <code>if</code> statements, dictionaries, <code>while</code> loops and functions. None of that has been lectured yet. Don't revise it.\n        </div>\n      </div>\n    </div>\n\n    <div class=\"card\" style=\"margin-top:14px;border-left:3px solid var(--clay)\">\n      <h4 style=\"font-family:var(--display);font-size:16px;margin-bottom:9px\">The real constraint: 20 seconds per question</h4>\n      <p style=\"font-size:14.5px;color:var(--ink-2)\">This is a recall test, not a reasoning test. You cannot derive anything — you either know it cold or you lose the question. Three consequences for how you revise and sit it:</p>\n      <ul style=\"margin:10px 0 0;padding-left:19px;font-size:14.5px;line-height:1.7\">\n        <li><strong>Drill recognition, not understanding.</strong> Definitions, the classification trees, and which Python method does what are the whole game.</li>\n        <li><strong>Never re-read a question.</strong> If the answer isn't there in ~15 seconds, mark a guess and move. 60 attempted beats 45 perfected.</li>\n        <li><strong>Watch for multi-correct.</strong> Read the stem for “select all”, then commit. Don't audit your single-select answers for hidden second options.</li>\n      </ul>\n    </div>",
 
-// content sections
-for(const [id,items] of Object.entries(SECTIONS)){
-  const el=document.getElementById(id); if(!el) continue;
-  el.innerHTML=items.map((it,i)=>
-   `<details class="topic"${i===0?" open":""}><summary>${esc(it.t)}<span class="src">${esc(it.src)}</span></summary><div class="tbody">${it.h}</div></details>`).join("");
-}
+  mapLede: "All 16 lectures in scope. The three live sessions largely re-teach the recorded ones, which is a useful signal: material repeated across both is what he thinks matters.",
+  syllabusNote: "everything to 20 Sep",
 
-// traps
-$("#s-traps").innerHTML=TRAPS.map(([h,p,f])=>
- `<div class="trap"><h4>${esc(h)}</h4><p>${esc(p)}</p><div class="fix">→ ${esc(f)}</div></div>`).join("");
+  drillLede: "Nine of these are the actual \u201cTest your knowledge\u201d questions from the course deck \u2014 marked <span style=\"font-family:var(--mono);font-size:11px;background:var(--clay-soft);color:var(--clay);padding:1px 7px;border-radius:99px\">FROM DECK</span>. The rest are written from the lectures. Turn the pacer on to rehearse the real 20-second clock.",
 
-/* ---------- countdown ---------- */
-const EXAM=new Date("2026-09-26T17:00:00+05:30");
-function tick(){
-  const d=EXAM-new Date();
-  const el=$("#countdown");
-  if(d<=0){ el.innerHTML='Now<small>good luck</small>'; return; }
-  const days=Math.floor(d/864e5), hrs=Math.floor(d/36e5)%24, min=Math.floor(d/6e4)%60;
-  el.innerHTML=`${days}d ${hrs}h ${min}m<small>to start</small>`;
-}
-tick(); setInterval(tick,30000);
+  footer: "Compiled 22 September 2026 from the IITJ LMS: 16 lecture AI-summaries, 16 full transcripts (512,000 characters) and the shared 267-slide deck. Quiz logistics from the official exam schedule (timings) and the Live Lecture 3 recording of 19 September (format and syllabus); schedule corrected 26 September. Topic weightings are an estimate, not an official mark scheme. <strong>This is a student-made study aid, not official IIT Jodhpur or Masai School course material</strong> \u2014 always check the LMS for the authoritative syllabus and quiz details.",
 
-/* ---------- nav ---------- */
-const navBtns=[...document.querySelectorAll("#nav button")];
-navBtns.forEach(b=>b.addEventListener("click",()=>{
-  const t=document.getElementById(b.dataset.go);
-  if(t) t.scrollIntoView({behavior:"smooth",block:"start"});
-}));
-const secs=navBtns.map(b=>document.getElementById(b.dataset.go)).filter(Boolean);
-const io=new IntersectionObserver(es=>{
-  es.forEach(e=>{ if(e.isIntersecting){
-    navBtns.forEach(b=>b.setAttribute("aria-current", b.dataset.go===e.target.id ? "true":"false"));
-  }});
-},{rootMargin:"-70px 0px -70% 0px"});
-secs.forEach(s=>io.observe(s));
-
-/* ---------- drill ---------- */
-const TOPICS=[...new Set(Q.map(q=>q.t))];
-$("#filter").innerHTML=`<option value="">All topics · ${Q.length} questions</option>`+
-  TOPICS.map(t=>`<option value="${esc(t)}">${esc(t)} · ${Q.filter(q=>q.t===t).length}</option>`).join("")+
-  `<option value="__official">From the deck · 9</option>`;
-$("#qcount").textContent=Q.length+" questions";
-
-let pool=[],idx=0,right=0,answered=0,pacer=false,timer=null,left=20,missed={};
-
-function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-
-function build(){
-  const f=$("#filter").value;
-  pool = f==="__official" ? Q.filter(q=>q.o) : f ? Q.filter(q=>q.t===f) : Q.slice();
-  pool=shuffle(pool.slice());
-  idx=0;right=0;answered=0;missed={};
-  render();
-}
-
-function stopTimer(){ if(timer){clearInterval(timer);timer=null;} }
-
-function startTimer(){
-  stopTimer(); if(!pacer) return;
-  left=20; paintClock();
-  timer=setInterval(()=>{
-    left--; paintClock();
-    if(left<=0){ stopTimer(); const q=pool[idx]; if(q) reveal(q,[],true); }
-  },1000);
-}
-function paintClock(){
-  const c=$("#clock"); if(!c) return;
-  c.textContent=`${left}s`;
-  c.classList.toggle("low", left<=5);
-}
-
-function render(){
-  stopTimer();
-  const card=$("#qcard");
-  if(idx>=pool.length){ return done(); }
-  const q=pool[idx];
-  card.innerHTML=`
-    <div class="qmeta">
-      <span class="qnum">Q${idx+1} / ${pool.length}</span>
-      <span class="qtopic${q.o?" official":""}">${q.o?"from deck":esc(q.t)}</span>
-      ${q.multi?'<span class="qtopic">select all</span>':''}
-      ${pacer?'<span class="clock" id="clock">20s</span>':''}
-    </div>
-    <p class="qtext">${esc(q.q)}</p>
-    <div class="opts" id="opts">
-      ${q.c.map((c,i)=>`<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${esc(c)}</span></button>`).join("")}
-    </div>
-    ${q.multi?'<div style="margin-top:10px"><button class="btn ghost" id="submulti">Submit answer</button></div>':''}
-    <div id="after"></div>`;
-  $("#score").textContent=`${right} / ${answered}`;
-
-  const picked=new Set();
-  const optEls=[...card.querySelectorAll(".opt")];
-  optEls.forEach(b=>b.addEventListener("click",()=>{
-    if(q.multi){
-      const i=+b.dataset.i;
-      if(picked.has(i)){picked.delete(i);b.style.borderColor="";b.style.background="";}
-      else{picked.add(i);b.style.borderColor="var(--blue)";b.style.background="var(--blue-soft)";}
-    } else {
-      reveal(q,[+b.dataset.i],false);
-    }
-  }));
-  const sm=$("#submulti");
-  if(sm) sm.addEventListener("click",()=>reveal(q,[...picked],false));
-  startTimer();
-}
-
-function reveal(q,chosen,timedOut){
-  stopTimer();
-  const correct = chosen.length===q.a.length && chosen.every(i=>q.a.includes(i));
-  answered++; if(correct) right++; else missed[q.t]=(missed[q.t]||0)+1;
-  const card=$("#qcard");
-  card.querySelectorAll(".opt").forEach(b=>{
-    const i=+b.dataset.i; b.disabled=true; b.style.borderColor="";b.style.background="";
-    if(q.a.includes(i)) b.classList.add("right");
-    else if(chosen.includes(i)) b.classList.add("wrong");
-  });
-  const sm=$("#submulti"); if(sm) sm.remove();
-  $("#after").innerHTML=
-    `<div class="why"><b>${timedOut?"Out of time.":correct?"Correct.":"Not quite."}</b> ${esc(q.w)}</div>
-     <div style="margin-top:14px"><button class="btn" id="next">${idx+1>=pool.length?"See results":"Next question"}</button></div>`;
-  $("#score").textContent=`${right} / ${answered}`;
-  const n=$("#next"); n.addEventListener("click",()=>{idx++;render();}); n.focus();
-}
-
-function done(){
-  const pct=answered?Math.round(right*100/answered):0;
-  const weak=Object.entries(missed).sort((a,b)=>b[1]-a[1]);
-  $("#qcard").innerHTML=`
-    <div class="donecard">
-      <div class="big">${right} / ${answered}</div>
-      <p>${pct}% — ${pct>=85?"exam-ready on this set.":pct>=65?"solid; tighten the weak topics below.":"go back through the topic sections, then run this again."}</p>
-      ${weak.length?`<div class="weak"><h4 style="font-family:var(--display);font-size:14px;margin-bottom:6px">Missed by topic</h4>${
-        weak.map(([t,n])=>`<div><span>${esc(t)}</span><span style="font-family:var(--mono);color:var(--bad)">${n}</span></div>`).join("")}</div>`:""}
-      <div style="margin-top:20px"><button class="btn" id="again">Run it again</button></div>
-    </div>`;
-  $("#again").addEventListener("click",build);
-}
-
-$("#filter").addEventListener("change",build);
-$("#restart").addEventListener("click",build);
-$("#pacer").addEventListener("click",()=>{
-  pacer=!pacer;
-  const b=$("#pacer");
-  b.textContent="Pacer: "+(pacer?"on · 20s":"off");
-  b.setAttribute("aria-pressed",String(pacer));
-  b.classList.toggle("ghost",!pacer);
-  render();
-});
-
-build();
-</script>
-
-</body></html>
+  lectures: LECTURES,
+  weights:  WEIGHTS,
+  traps:    TRAPS,
+  questions: Q,
+  sections: SECTION_META.map(m => Object.assign({}, m, {topics: SECTIONS["s-" + m.id]}))
+};

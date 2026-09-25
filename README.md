@@ -1,25 +1,75 @@
-# Foundations of Computing — Quiz 1 Revision
+# Semester 1 Quiz Prep
 
-A single-page revision sheet for **Foundations of Computing**, IIT Jodhpur B.S. in Management & Technology, Semester 1.
+Revision sheets for the six Quiz 1 papers in **IIT Jodhpur's B.S. in Management &
+Technology, Semester 1**. Each course page carries an exam brief, a syllabus map,
+topic-by-topic notes drawn from that course's lectures, a trap list, and a timed
+question drill whose pacer matches the real seconds-per-question.
 
-Covers all 16 lectures released up to 20 September 2026, with a 104-question MCQ drill and a
-20-second pacer that matches the real quiz tempo (60 questions in 20 minutes).
+**These are student-made study aids, not official IIT Jodhpur or Masai School course
+material.** Always check the LMS for the authoritative syllabus and quiz details.
 
-**This is a student-made study aid, not official IIT Jodhpur or Masai School course material.**
-Always check the LMS for the authoritative syllabus and quiz details.
+## Layout
 
-## Sections
+```
+index.html                     hub — all six courses, sorted by what's next
+assets/
+  courses.js                   the quiz schedule + shared date helpers
+  sheet.css                    design tokens and every component
+  sheet.js                     renders a course page from its data.js
+  stub.js                      placeholder for a course not built yet
+<course-slug>/
+  index.html                   thin shell — loads the shared assets
+  data.js                      everything specific to that course
+build-standalone.py            inline a course into one shareable file
+```
 
-- Exam brief — format and syllabus, quoted from the Live Lecture 3 recording
-- Syllabus map — all 16 lectures, with estimated topic weighting
-- Computing & IPO · Data & DIKW · Data classification · Algorithms · Hardware · Software & OS · Python basics · Lists & tuples
-- Traps — 18 distinctions MCQ writers reach for
-- Drill — 104 questions, filterable by topic, with explanations
+Adding a course means writing one `data.js` and dropping in the shell. Nothing
+else changes, and a fix to the engine or the styling reaches all six at once.
+
+## The `data.js` contract
+
+`data.js` sets `window.COURSE`:
+
+| Key | What it is |
+|---|---|
+| `slug` | must match the folder name and the entry in `assets/courses.js` |
+| `eyebrow`, `heading`, `sub` | masthead copy (`heading` may contain HTML) |
+| `briefTag`, `briefLede`, `briefHtml` | the exam-brief section |
+| `mapLede`, `syllabusNote` | the syllabus-map section |
+| `lectures` | `[number, title, subtitle, "rec" \| "live"]` |
+| `weights` | `[topic, percent]` — bars are scaled to the largest |
+| `sections` | `[{id, title, navLabel, tag, lede, topics:[{t, src, h}]}]` |
+| `traps` | `[heading, explanation, one-line fix]` |
+| `questions` | see below |
+| `drillLede`, `footer` | copy |
+
+A question:
+
+```js
+{ t:"Topic name",          // groups it in the filter and the missed-by-topic report
+  o:true,                  // optional — came from the course's own slides
+  multi:true,              // optional — more than one correct answer
+  q:"Question text",
+  c:["Option A","Option B","Option C","Option D"],
+  a:[1],                   // indices into c
+  w:"Why this is the answer." }
+```
+
+Timings, durations and question counts live in `assets/courses.js`, not in
+`data.js`, so the hub and the course pages can never disagree.
 
 ## Running it
 
-It is one self-contained HTML file. Open `index.html` in any browser, or serve the folder:
+```bash
+python3 -m http.server 4520
+```
+
+Then open <http://localhost:4520>. To produce single-file copies for sharing:
 
 ```bash
-python3 -m http.server 8000
+python3 build-standalone.py
 ```
+
+Each becomes one self-contained `dist/*.html` that opens with no server and no
+network — Google Fonts are the only external request, and the fallback stacks
+handle it offline.
