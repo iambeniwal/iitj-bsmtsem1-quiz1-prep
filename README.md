@@ -28,6 +28,7 @@ assets/
   sheet.css                    design tokens and every component
   sheet.js                     renders a course page from its data.js
   stub.js                      placeholder for a course not built yet
+  analytics.js                 GA4 page views — hosted site only
 <course-slug>/
   index.html                   thin shell — loads the shared assets
   data.js                      everything specific to that course
@@ -84,6 +85,16 @@ python3 build-standalone.py
 Each becomes one self-contained `dist/*.html` that opens with no server and no
 network — Google Fonts are the only external request, and the fallback stacks
 handle it offline.
+
+## Analytics
+
+The hosted site counts page views with Google Analytics 4 (`assets/analytics.js`).
+It is page views only: no user IDs, no custom dimensions, nothing that identifies
+an individual reader.
+
+It does not run in two places. `build-standalone.py` strips the tag from every
+`dist/` file, and the script itself bails out on `file:` and on `localhost`, so an
+offline copy never phones home and local editing never shows up as traffic.
 
 ## Licence
 

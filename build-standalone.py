@@ -33,6 +33,9 @@ def inline(slug: str) -> pathlib.Path | None:
         # resolve a path written relative to the course folder
         return (course / rel).resolve().read_text(encoding="utf-8")
 
+    # the offline copies must not phone home
+    html = re.sub(r'\n?\s*<script src="[^"]*analytics\.js"></script>', "", html)
+
     # local stylesheets -> <style>
     def css_sub(m):
         href = m.group(1)

@@ -91,7 +91,8 @@ root.innerHTML = `
     <p class="licence">Notes and questions licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC&nbsp;BY-NC-SA&nbsp;4.0</a>; site code under MIT.
       Underlying course material remains the property of IIT Jodhpur and the respective faculty and is <strong>not</strong> licensed here —
       see the <a href="https://github.com/iambeniwal/iitj-bsmtsem1-quiz1-prep/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">full notice</a>.
-      Not affiliated with or endorsed by IIT Jodhpur or Masai School.</p>
+      Not affiliated with or endorsed by IIT Jodhpur or Masai School.
+      This site counts page visits with Google&nbsp;Analytics; no personal data is collected, and the downloadable offline copies do not report at all.</p>
   </footer>`;
 
 const $ = s => root.querySelector(s);

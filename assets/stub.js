@@ -50,6 +50,7 @@ root.innerHTML = `
     <p class="credit">Compiled by <strong>Rahul Beniwal</strong> &middot;
       <a href="https://www.linkedin.com/in/iambeniwal/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     <p>Student-made study aid, not official IIT Jodhpur or Masai School course material.
-      Always check the LMS for the authoritative syllabus and quiz details.</p>
+      Always check the LMS for the authoritative syllabus and quiz details.
+      Page visits are counted with Google&nbsp;Analytics; no personal data is collected.</p>
   </footer>`;
 })();
