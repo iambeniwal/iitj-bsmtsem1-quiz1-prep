@@ -19,6 +19,8 @@ material.** Always check the LMS for the authoritative syllabus and quiz details
 
 Compiled by **Rahul Beniwal** — [LinkedIn](https://www.linkedin.com/in/iambeniwal/)
 
+What has changed, and which corrections reversed earlier advice: [`CHANGELOG.md`](CHANGELOG.md).
+
 ## Layout
 
 ```
