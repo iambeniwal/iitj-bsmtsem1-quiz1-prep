@@ -115,7 +115,19 @@ const SECTIONS={
    <li><strong>Knowledge:</strong> those areas have lower income, poorer infrastructure, less formal employment — the default rate is a consequence of structural disadvantage.</li>
    <li><strong>Wisdom:</strong> do <em>not</em> use the variable. Denying a whole geography credit is <strong>redlining</strong> — illegal in many countries and unethical.</li>
   </ul>
-  <div class="def">Slide 58 asks this directly: the bank goes wrong by <b>acting at the Information level</b> without climbing to Knowledge and Wisdom.</div>`}
+  <div class="def">Slide 58 asks this directly: the bank goes wrong by <b>acting at the Information level</b> without climbing to Knowledge and Wisdom.</div>
+  <h4>Telling the rungs apart under time pressure</h4>
+  <p style="font-size:14.5px">Do not ask what the statement is <em>about</em> — ask what it <em>adds</em>:</p>
+  <ul>
+   <li>A bare value or a log line, no context &rarr; <strong>Data</strong></li>
+   <li>Counted, aggregated, given units or a time window &rarr; <strong>Information</strong></li>
+   <li>Explains <em>why</em>, usually by combining two or more sources &rarr; <strong>Knowledge</strong></li>
+   <li>Picks an action and accepts a cost or a risk &rarr; <strong>Wisdom</strong></li>
+  </ul>
+  <div class="def"><b>The trap that actually catches people.</b> Every rung&rsquo;s description sounds like the rung below it.
+   &ldquo;Accumulated information interpreted through pattern recognition&rdquo; is <b>Knowledge</b>, not Wisdom.
+   &ldquo;Millions of users did X at the same second&rdquo; is <b>Information</b>, not Knowledge &mdash; it counts, it does not explain.
+   When a stem names a rung, check whether the option you like is quietly describing the one beneath it.</div>`}
 ],
 
 "s-classify":[
@@ -558,6 +570,22 @@ const Q=[
 {t:"Data & DIKW",q:"Which are the four pillars of computing? (Select all)",multi:true,c:["Data","Algorithm","Hardware","Software"],a:[0,1,2,3],w:"All four, and they are equally essential — remove any one and computing fails."},
 {t:"Data & DIKW",q:"'38.5' on its own is:",c:["Information","Data","Knowledge","Metadata"],a:[1],w:"Raw data. 'The patient's temperature is 38.5 °C' adds context and becomes information."},
 
+// ---- DIKW ladder drill: name the rung, not the topic ----
+{t:"DIKW ladder",q:"Which rung? &mdash; A log line reading: user 88213, event PAUSE, content 5512, timecode 00:42:15.",c:["Data","Information","Knowledge","Wisdom"],a:[0],w:"An uncontextualised record is Data. It becomes Information only once it is counted or given a time window."},
+{t:"DIKW ladder",q:"Which rung? &mdash; 3.2 million viewers paused at exactly 00:42:15.",c:["Data","Information","Knowledge","Wisdom"],a:[1],w:"Counting raw events adds context, which is Information. It says what happened, not why &mdash; so it is not Knowledge."},
+{t:"DIKW ladder",q:"Which rung? &mdash; Cross-referencing the pause spike against the script shows the scene introduces a subplot with no setup, and that is what drives the drop-off.",c:["Data","Information","Knowledge","Wisdom"],a:[2],w:"It explains why, by combining two sources. That is Knowledge."},
+{t:"DIKW ladder",q:"Which rung? &mdash; Re-edit the pacing of future releases and show returning viewers a contextual recap.",c:["Data","Information","Knowledge","Wisdom"],a:[3],w:"It chooses an action and accepts its cost. Wisdom."},
+{t:"DIKW ladder",q:"In the Netflix DIKW example, what does Knowledge allow the enterprise to understand?",c:["That millions of users interrupt playback at the same second","The root cause of the friction, by combining streaming data with script and demographic analytics","The raw timecode at which each individual pause event was recorded","Which re-edit to commission for the next release"],a:[1],w:"All four rungs are on offer here, which is the whole difficulty. Option 1 is Information (a count), option 3 is Data, option 4 is Wisdom (an action). Knowledge explains why."},
+{t:"DIKW ladder",q:"Which of these is a characteristic of Wisdom?",c:["It is the accumulation of information over time, interpreted through pattern recognition","It involves making good decisions under uncertainty, with incomplete information","It adds units, context and a time window to raw values","It is the unprocessed output of a sensor or a log"],a:[1],w:"Wisdom is judgement under uncertainty. Option 1 describes Knowledge and is by far the most common wrong answer; options 3 and 4 are Information and Data."},
+{t:"DIKW ladder",q:"&ldquo;The accumulation of information over time, interpreted through pattern recognition&rdquo; describes which rung?",c:["Information","Knowledge","Wisdom","Data"],a:[1],w:"Knowledge. Drill this one in both directions: once you can name it as Knowledge on sight, you stop picking it when a question asks about Wisdom."},
+{t:"DIKW ladder",q:"What turns Data into Information?",c:["Adding context &mdash; units, aggregation, a time window","Explaining the underlying cause","Choosing an action and accepting its cost","Storing it in a database"],a:[0],w:"Context. Storage changes nothing about the rung: a database full of bare values is still Data."},
+{t:"DIKW ladder",q:"What turns Information into Knowledge?",c:["Counting it more accurately","Explaining why, usually by combining more than one source","Acting on it","Visualising it on a dashboard"],a:[1],w:"Explanation. A dashboard is still Information, however good it looks, and acting on it jumps to Wisdom."},
+{t:"DIKW ladder",q:"Which rung? &mdash; Applicants from postal codes X, Y and Z default at 3.4 times the rate of others, confirmed in the data.",c:["Data","Information","Knowledge","Wisdom"],a:[1],w:"A confirmed count, so Information. The bank&rsquo;s failure in the case is acting at exactly this rung without climbing any higher."},
+{t:"DIKW ladder",q:"Which rung? &mdash; Those areas have lower incomes, weaker infrastructure and less formal employment, so the default rate reflects structural disadvantage.",c:["Data","Information","Knowledge","Wisdom"],a:[2],w:"It supplies the cause behind the number. Knowledge."},
+{t:"DIKW ladder",q:"In the bank loan case, what is the wise decision?",c:["Weight the postal-code variable lower rather than dropping it","Do not use the postal-code variable at all","Use it, but disclose it to applicants","Use it only for applicants above a certain loan size"],a:[1],w:"Refuse to use it. Denying a whole geography credit is redlining, illegal in many countries. Note that Wisdom here is a decision NOT to act on the information."},
+{t:"DIKW ladder",q:"At which rung do cost, risk and ethics first enter?",c:["Information","Knowledge","Wisdom","Data"],a:[2],w:"Data, Information and Knowledge are all descriptive. Wisdom is the only rung that weighs what should be done."},
+{t:"DIKW ladder",q:"How does the Enterprise View of computing differ from the Traditional View?",c:["It shifts from screen output to automated action and revenue generation","It relies exclusively on structured data rather than unstructured data","It replaces the IPO model with a different model altogether","It removes the need for algorithms"],a:[0],w:"The IPO model still holds &mdash; what changes is what each stage looks like. Output moves from a screen to an automated business decision that grows revenue or cuts cost. The enterprise view consumes far MORE unstructured data, not less."},
+
 // ---- data classification extra ----
 {t:"Data classification",q:"Which is an example of semi-structured data?",c:["An Excel spreadsheet","A JSON file from a web API","A podcast recording","A relational database table"],a:[1],w:"JSON, XML, HTML and email (.eml) are semi-structured."},
 {t:"Data classification",q:"Compared with structured data, unstructured data has:",c:["Lower analysis cost and lower capability requirement","Higher analysis cost and higher capability requirement","Higher analysis cost but lower capability requirement","The same cost and capability requirement"],a:[1],w:"Both are higher. It needs specialised tooling — NLP transformers, computer vision."},
@@ -595,6 +623,7 @@ const Q=[
 {t:"Hardware",q:"Which is an output device?",c:["Microphone","Haptic feedback motor","Barometer","Touchscreen input layer"],a:[1],w:"Haptic feedback — the vibration you feel when tapping a keyboard — is output. Monitor, printer, speakers and actuators are the others."},
 
 // ---- software ----
+{t:"Software & OS",q:"Which operating system uses the NT kernel and dominates the enterprise market?",c:["Linux","Windows 11","macOS","Android"],a:[1],w:"Windows, on the NT kernel. Linux is the reflex answer and it is right about SERVERS — but the enterprise desktop is Windows. Read which of the two the stem is asking about."},
 {t:"Software & OS",q:"Which statement about the operating system is correct?",c:["It starts last and stops first","It starts first, runs always, and never stops until shutdown","It only runs when an application requests it","It is a type of utility software"],a:[1],w:"The OS is the master program — system software, not utility software."},
 {t:"Software & OS",q:"Linux runs approximately what share of the world's web servers?",c:["46%","66%","86%","96%"],a:[3],w:"~96%, per the slide. Android holds ~72% of the global smartphone market."},
 {t:"Software & OS",q:"Which OS responsibility stops one app from reading another app's private data?",c:["Process management","Memory management","Security","File system"],a:[2],w:"Security — controlling which programs and users access which resources."},

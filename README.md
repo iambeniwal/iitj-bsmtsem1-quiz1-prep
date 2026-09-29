@@ -5,7 +5,7 @@ Technology, Semester 1**. Each course page carries an exam brief, a syllabus map
 topic-by-topic notes drawn from that course's lectures, a trap list, and a timed
 question drill whose pacer matches the real seconds-per-question.
 
-All six are complete: **534 questions** across the six courses, built from every
+All six are complete: **549 questions** across the six courses, built from every
 in-scope lecture summary, full transcript and slide deck on the LMS.
 
 **All six quizzes use negative marking** — +1 for a correct answer, −0.25 for a
