@@ -19,8 +19,6 @@ material.** Always check the LMS for the authoritative syllabus and quiz details
 
 Compiled by **Rahul Beniwal** — [LinkedIn](https://www.linkedin.com/in/iambeniwal/)
 
-What has changed, and which corrections reversed earlier advice: [`CHANGELOG.md`](CHANGELOG.md).
-
 ## Layout
 
 ```
@@ -35,6 +33,9 @@ assets/
   index.html                   thin shell — loads the shared assets
   data.js                      everything specific to that course
 build-standalone.py            inline a course into one shareable file
+CHANGELOG.md                   dated history; corrections that reversed advice
+LICENSE                        the three-way split — see Licence below
+robots.txt                     Disallow: / — the site is unlisted, not secret
 ```
 
 Adding a course means writing one `data.js` and dropping in the shell. Nothing
@@ -97,6 +98,37 @@ an individual reader.
 It does not run in two places. `build-standalone.py` strips the tag from every
 `dist/` file, and the script itself bails out on `file:` and on `localhost`, so an
 offline copy never phones home and local editing never shows up as traffic.
+
+## Changelog
+
+Full history is in [`CHANGELOG.md`](CHANGELOG.md). Most recent:
+
+- **[2.6.1] — 2026-09-29** — Added `CHANGELOG.md` and this section, following the Dragonglass AI Operating System conventions: Keep a Changelog format, semantic versions, and a README "most recent" list updated in the same commit as the changelog itself.
+- **[2.6.0] — 2026-09-29** — **DIKW ladder drill** in Foundations of Computing: 14 questions under their own filterable topic that ask you to *name the rung* rather than recall a case number — the Netflix and bank scenarios stepped rung by rung so only the rung differs between stems, both commonly missed stems restated with every distractor's rung named, and the two transitions given questions of their own. Built after Quiz 1 showed three of four dropped marks were one confusion: reading the ladder one rung low. Also added a rung test to the notes (ask what a statement *adds*, not what it is about) and the NT-kernel question to Software & OS. Foundations 104 → 119 questions; **549** across the six courses.
+- **[2.5.0] — 2026-09-26** — **Google Analytics** on the hosted site via a shared `assets/analytics.js` — page views only, no user IDs, no custom dimensions. Stripped from every `dist/` build at build time and disabled on `file:` and `localhost`, so a downloaded offline copy never phones home. Privacy line added to every footer.
+- **[2.4.0] — 2026-09-26** — **`LICENSE`**: a three-way split for three kinds of material with three different owners — MIT for the site code, CC BY-NC-SA 4.0 for the revision notes and question bank, and the underlying IIT Jodhpur course material **explicitly not licensed here**. Plus author credit and a LinkedIn link in every footer.
+- **[2.3.0] — 2026-09-26** — The four remaining sheets (Algorithmic Thinking in Business, Financial Accounting, Statistics for Managers, Principles of Marketing). All six courses built, **534 questions**.
+- **[2.2.0] — 2026-09-26** — **Fixed, from the official LMS quiz announcements.** All six quizzes use **negative marking** (+1 / −0.25 / 0), mentioned in none of the 81 lectures — the sheets had until then advised **guessing freely, which was wrong**, and every sheet now carries an expected-value table. Quiz weighting is **not** uniform (Foundations 15%, the other five 20%). Syllabus scope is narrower than the obvious reading on four courses, and genuinely disputed on Statistics, where the official document and the lecturer disagree.
+- **[2.1.0] — 2026-09-26** — **Economic & Business History** sheet, the first course on the shared engine and the proof that the `data.js` contract holds for a different shape of material.
+- **[2.0.0] — 2026-09-26** — **Restructured from a single page into a six-course site**: shared engine in `assets/`, one `data.js` per course, hub sorted by next quiz, plus `build-standalone.py` for offline copies. **Breaking** — the original single-page URL is gone.
+- **[1.0.1] — 2026-09-26** — **Fixed** the Foundations quiz time, 8:00 AM → 17:00–17:20 IST. The lecturer said 8 AM in Live Lecture 3; the official schedule said 17:00 and was right.
+- **[1.0.0] — 2026-09-26** — Baseline: the Foundations of Computing Quiz 1 revision sheet as a single page.
+
+### Changelog update rule
+
+Every meaningful change — new or edited course content, scope or schedule corrections,
+tooling, structure — is recorded in the **same commit** that makes it:
+
+1. A dated entry in [`CHANGELOG.md`](CHANGELOG.md) under a new `## [x.y.z] — YYYY-MM-DD`
+   heading with the right subheading (**Added / Changed / Removed / Fixed**). Bump
+   **patch** for a fix or tweak, **minor** for new course content or a new section,
+   **major** for a restructure that breaks existing links.
+2. This **Changelog** list updated to match, and the **Layout** file tree updated if a
+   file was added — the tree is the discoverability index, so a file missing from it is
+   effectively hidden.
+
+Anything that reverses advice an earlier version gave goes under **Fixed** and says so
+outright. Two entries already do, and someone may have revised from the old version.
 
 ## Licence
 
