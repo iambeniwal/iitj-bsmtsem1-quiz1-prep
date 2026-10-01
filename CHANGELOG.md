@@ -7,6 +7,29 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); dates are YYYY-M
 earlier version gave — and twice it does — it is filed under **Fixed** and says so
 plainly, because anyone who revised from the earlier sheet needs to know what moved.
 
+## [2.7.0] — 2026-10-01
+
+### Added
+- **Why the guild system declined** — a new topic in the Guilds section of Economic &
+  Business History, plus 7 questions under a filterable **Guild decline** topic. Quiz 1
+  asked which forces ended the guilds and the sheet could not answer it: there were ten
+  guild questions covering definition, hierarchy, the common box and functions, and
+  none on the decline. **"Merchant capitalism" did not appear anywhere in the course
+  data**, so the term itself is now defined — merchants, not makers, owning the
+  materials and keeping the profit — alongside the putting-out system and the
+  Industrial Revolution as the three named forces. Includes a warning about the
+  **combination question format** (I / II / III), where under negative marking the
+  instinct to drop the statement you are least sure of costs the mark.
+- **Dates & numbers** — a 14-question rapid-recall drill for Economic & Business
+  History. Quiz 1's other two dropped marks were both date or named-act recall, and the
+  wrong year given for the spinning jenny — 1753 — is itself a real date in the course,
+  the year a mob attacked **John Kay's** premises. The drill separates invention years
+  from riot years deliberately, covers the four inventions in sequence, and flags which
+  dates (Cromford Mill 1771, Bridgewater Canal 1761, Lancashire 1779, Arkwright's
+  patents 1785) sit in the out-of-scope Lecture 15–16 sections.
+
+Economic & Business History 109 → 130 questions; **570** across the six courses.
+
 ## [2.6.1] — 2026-09-29
 
 ### Added
